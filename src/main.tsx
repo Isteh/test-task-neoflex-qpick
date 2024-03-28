@@ -8,11 +8,15 @@ import Catalog from './pages/Catalog/Catalog.tsx'
 import { Provider } from 'react-redux'
 import { appStore } from './store/appStore.ts'
 import NotFound from './pages/NotFound/NotFound.tsx'
+import ScrollToTop from './components/layout/ScrollToTop/ScrollToTop.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainLayout />,
+    element: <>
+      <MainLayout />
+      <ScrollToTop />
+    </>,
     children: [
       {
         index: true,

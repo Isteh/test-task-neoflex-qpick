@@ -56,3 +56,24 @@
   font-size: 15px;
   font-weight: 600;
 }
+
+.error {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: fit-content;
+}
+
+.errorLink {
+  text-decoration: none;
+}
+
+.errorTitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
