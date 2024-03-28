@@ -5,6 +5,9 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import MainLayout from './components/layout/MainLayout/MainLayout.tsx'
 import Cart from './pages/Cart/Cart.tsx'
 import Catalog from './pages/Catalog/Catalog.tsx'
+import { Provider } from 'react-redux'
+import { appStore } from './store/appStore.ts'
+import NotFound from './pages/NotFound/NotFound.tsx'
 
 const router = createBrowserRouter([
   {
@@ -18,13 +21,20 @@ const router = createBrowserRouter([
       {
         path: 'cart',
         element: <Cart />
+      },
+      {
+        path: '*',
+        element: <NotFound />
       }
     ]
-  }
+  },
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={appStore}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )

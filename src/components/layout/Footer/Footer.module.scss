@@ -19,6 +19,7 @@
 }
 
 .twoColumnWrapper {
+  margin-top: -4px;
   width: 427px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,8 +78,8 @@
 }
 
 .socialLinks {
-  gap: 18px;
-
+  margin-top: -9px;
+  margin-right: -9px;
   @media (max-width: $mobile-breakpoint) {
     align-self: center;
   }
